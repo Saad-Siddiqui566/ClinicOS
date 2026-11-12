@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FFFFFF;
+  --color-navy: #111827;
+  --color-sage: #245BFA;
+  --color-navy-2: #1B2436;        /* icon box / raised surface on navy */
+  --color-on-navy-muted: #9CA3AF; /* labels and secondary text on navy */
+  --color-line-light: #E5E7EB;    /* border on white card */
+  --color-line-dark: rgba(255,255,255,0.28); /* outline buttons on navy */
+  --color-sage-hover: #1D4ED8;    /* hover for primary buttons */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --brand-ivory: #FFFFFF;
+    --brand-navy: #111827;
+    --brand-sage: #245BFA;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: clamp(0.9375rem, 1vw, 1rem); /* 15px mobile -> 16px desktop */
+    font-weight: 400;
+    line-height: 1.65;
+    letter-spacing: -0.006em;
+    color: #111827;
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    color: #111827;
+    text-wrap: balance;
+  }
+
+  p {
+    font-family: var(--font-sans);
+    line-height: 1.65;
+  }
+
+  button, input, select, textarea {
+    font-family: var(--font-sans);
+  }
+
+  .font-mono, .tabular-nums {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Precision Typography System Utility Classes */
+.type-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 3.8vw, 3.5rem); /* 36px mobile -> 56px desktop (within 52-58px spec) */
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.028em;
+  text-wrap: balance;
+}
+
+.type-section {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.6vw, 2.375rem); /* 28px mobile -> 38px desktop (within 36-40px spec) */
+  font-weight: 650;
+  line-height: 1.16;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+
+.type-page-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.1vw, 1.875rem); /* 24px mobile -> 30px desktop */
+  font-weight: 650;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.type-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.3125rem, 1.6vw, 1.5rem); /* 21px mobile -> 24px desktop */
+  font-weight: 600;
+  line-height: 1.28;
+  letter-spacing: -0.016em;
+  text-wrap: balance;
+}
+
+.type-subhead {
+  font-family: var(--font-display);
+  font-size: clamp(1.0625rem, 1.2vw, 1.1875rem); /* 17px mobile -> 19px desktop */
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+}
+
+.type-body {
+  font-family: var(--font-sans);
+  font-size: clamp(0.9375rem, 1vw, 1rem); /* 15px mobile -> 16px desktop */
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+}
+
+.type-nav {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.008em;
+}
+
+.type-btn {
+  font-family: var(--font-sans);
+  font-size: clamp(0.875rem, 0.95vw, 0.9375rem); /* 14px - 15px */
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.006em;
+}
+
+.type-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.type-meta-sm {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem; /* 11px */
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.015em;
+  font-variant-numeric: tabular-nums;
+}
+
+.card-surface {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.card-surface-navy {
+  background-color: #111827;
+  color: #FFFFFF;
+  border: 1px solid #1B2436;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}

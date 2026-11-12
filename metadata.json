@@ -1,0 +1,6 @@
+{
+  "name": "ClinicOS — Complete Healthcare & Clinic Operations Platform",
+  "description": "Production-grade healthcare management web application with Patient Portal, Doctor Portal (Unified Daily Token Queue, Expense Management, Financial Analytics), and Protected Admin Panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
